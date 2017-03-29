@@ -10,6 +10,10 @@
 @{ var selection = CurrentPage.Site().Children.Where("Visible"); }
 
 <ul>
+    @{
+    var HomePage = @CurrentPage.AncestorsOrSelf(1).FirstOrDefault();
+    }
+    <li><a href="@HomePage.Url">@HomePage.Name</a></li>
     @foreach (var item in selection)
     {
         <li class="@(item.IsAncestorOrSelf(CurrentPage) ? "current" : null)">
