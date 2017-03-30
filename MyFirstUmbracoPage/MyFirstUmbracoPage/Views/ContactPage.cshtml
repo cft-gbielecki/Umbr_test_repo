@@ -1,0 +1,16 @@
+﻿@*@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ContactPage>*@
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+<form>
+    <label for="emailFrom">Email</label><input required id="emailFrom" type="email" />
+    <label for="nameFrom">Name</label><input required id="nameFrom" type="text" />
+    <br />
+    <label for="messageFrom">Message: </label>
+    <br />
+    <textarea required id="messageFrom" type="text"></textarea>
+    <br />
+    <input type="submit" value="Submit" />
+
+</form>
